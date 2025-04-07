@@ -30,6 +30,7 @@ export default function ContactForm() {
       // Reset form after successful submission
       setFormData({ fullName: '', email: '', company: '', message: '' });
     } catch (error) {
+        console.log(error)
       setSubmitStatus('error');
     } finally {
       setIsSubmitting(false);
