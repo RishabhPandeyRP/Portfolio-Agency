@@ -5,7 +5,7 @@ import { TechStack } from "@/components/TechStack";
 import { Process } from "@/components/Process";
 import Reviews from "@/components/Reviews";
 import ContactForm from "@/components/ContactForm";
-import Footer from "@/components/Footer";
+// import Footer from "@/components/Footer";
 
 export default function Home() {
   return (

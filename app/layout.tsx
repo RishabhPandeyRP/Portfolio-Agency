@@ -1,5 +1,5 @@
 "use client"
-import type { Metadata } from "next";
+// import type { Metadata } from "next";
 // import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Navbar, NavBody, NavItems, NavbarLogo, NavbarButton, MobileNav, MobileNavHeader, MobileNavToggle, MobileNavMenu,  } from "@/components/ui/resizable-navbar"
@@ -34,7 +34,7 @@ export default function RootLayout({
 }>) {
 
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-const [visible, setIsVisible] = useState(false);
+const [visible] = useState(false);
   return (
     <html lang="en" className="dark">
       <body

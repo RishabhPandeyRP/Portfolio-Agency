@@ -2,7 +2,7 @@ import React from "react"
 import { cn } from "@/lib/utils";
 import { OurValues } from "@/components/OurValues";
 import ExpertiesCards from "@/components/ExpertiesCards";
-import Footer from "@/components/Footer";
+// import Footer from "@/components/Footer";
 
 const About = () => {
     return (
