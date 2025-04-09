@@ -46,7 +46,7 @@ interface MobileNavMenuProps {
   children: React.ReactNode;
   className?: string;
   isOpen: boolean;
-  // onClose: () => void;
+  onClose: () => void;
 }
 
 export const Navbar = ({ children, className }: NavbarProps) => {
@@ -195,6 +195,7 @@ export const MobileNavMenu = ({
   children,
   className,
   isOpen,
+  onClose
 }: MobileNavMenuProps) => {
   return (
     <AnimatePresence>
@@ -208,12 +209,55 @@ export const MobileNavMenu = ({
             className,
           )}
         >
-          {children}
+          {/* Add a close button at the top */}
+          <div className="w-full flex justify-end">
+            <IconX 
+              className="text-black dark:text-white cursor-pointer" 
+              onClick={onClose}
+            />
+          </div>
+          
+          {/* Instead of trying to clone and modify children elements,
+              we'll create a menu item wrapper component */}
+          <div className="w-full space-y-4">
+            {children}
+          </div>
+          
+          {/* Add a secondary close button at the bottom for easier access */}
+          <div className="w-full mt-4 pt-4 border-t border-gray-100 dark:border-neutral-800">
+            <button 
+              onClick={onClose}
+              className="w-full py-2 text-center text-neutral-600 dark:text-neutral-300 hover:text-black dark:hover:text-white"
+            >
+              Close Menu
+            </button>
+          </div>
         </motion.div>
       )}
     </AnimatePresence>
   );
 };
+
+// Create a component for mobile menu items with close functionality
+// export const MobileNavItem = ({
+//   href,
+//   children,
+//   onClose,
+// }: {
+//   href: string;
+//   children: React.ReactNode;
+//   onClose: () => void;
+// }) => {
+//   return (
+//     <Link
+//       href={href}
+//       className="w-full px-4 py-2 text-neutral-600 dark:text-neutral-300 hover:text-black dark:hover:text-white"
+//       onClick={onClose}
+//     >
+//       {children}
+//     </Link>
+//   );
+// };
 
 export const MobileNavToggle = ({
   isOpen,
