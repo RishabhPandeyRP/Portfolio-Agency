@@ -12,18 +12,18 @@ const About = () => {
             "[background-size:40px_40px]",
             "[background-image:linear-gradient(to_right,#e4e4e7_1px,transparent_1px),linear-gradient(to_bottom,#e4e4e7_1px,transparent_1px)]",
             "dark:[background-image:linear-gradient(to_right,#262626_1px,transparent_1px),linear-gradient(to_bottom,#262626_1px,transparent_1px)]",
-            "h-fit border-1 border-red-400 pt-[8%] relative"
+            "h-fit border-0 border-red-400 pt-[8%] relative"
         )}>
             <div className="pointer-events-none absolute inset-0 flex items-center justify-center bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)] dark:bg-black z-0"></div>
 
-            <div className="flex flex-col">
+            <div className="flex flex-col border-0 border-red-500 mt-12 sm:mt-14 md:mt-5">
                 <div className="border-0 border-red-500 text-white z-30 w-[80%] px-2 mx-auto flex flex-col gap-20">
 
                     <div className="flex flex-col gap-8">
                         <h2 className="text-5xl text-center leading-relaxed "
                             style={{ textShadow: '0 2px 10px #707070' }}
                         >Our Genesis</h2>
-                        <div className="border-0 border-red-500 w-[90%] mx-auto text-neutral-400 text-center text-lg">Founded in 2019, Pixel Pulse began with three friends who shared a vision: to create digital experiences that transform how businesses connect with their audience. What started in a small co-working space has evolved into a dynamic team of 28 creators, developers, and strategists united by our passion for pushing the boundaries of digital design.</div>
+                        <div className="border-0 border-red-500 w-[90%] mx-auto text-neutral-400 text-center text-base md:text-base lg:text-lg">Founded in 2019, Pixel Pulse began with three friends who shared a vision: to create digital experiences that transform how businesses connect with their audience. What started in a small co-working space has evolved into a dynamic team of 28 creators, developers, and strategists united by our passion for pushing the boundaries of digital design.</div>
                     </div>
 
                     <div className="flex flex-col gap-8 my-[2%]">
@@ -44,7 +44,7 @@ const About = () => {
                         <h2 className="text-5xl text-center leading-relaxed "
                             style={{ textShadow: '0 2px 10px #707070' }}
                         >Let&rsquo;s Create Together</h2>
-                        <div className="border-0 border-red-500 w-[90%] mx-auto text-neutral-400 text-center text-lg flex flex-col gap-5">
+                        <div className="border-0 border-red-500 w-[90%] mx-auto text-neutral-400 text-center text-base md:text-base lg:text-lg flex flex-col gap-5">
                             <div>
                                 Ready to transform your digital vision into reality? We&rsquo;re just a conversation away from bringing your boldest ideas to life.
                             </div>

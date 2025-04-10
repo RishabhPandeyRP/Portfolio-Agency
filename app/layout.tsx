@@ -22,7 +22,7 @@ const inter = Inter({
 const navItems = [
   { name: "Home", link: "/" },
   { name: "About", link: "/about" },
-  { name: "Services", link: "/services" },
+  { name: "Work", link: "/work" },
   { name: "Contact", link: "/contact" }
 ];
 
@@ -38,7 +38,7 @@ const [visible] = useState(false);
   return (
     <html lang="en" className="dark">
       <body
-        className={`${inter.className} antialiased border-1 border-green-600 flex flex-col min-h-screen`}
+        className={`${inter.className} antialiased border-0 border-green-600 flex flex-col min-h-screen`}
       >
         <div className="border-0 border-green-400 pt-[0px]">
           <Navbar>

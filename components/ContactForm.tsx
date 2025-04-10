@@ -40,17 +40,17 @@ export default function ContactForm() {
   };
 
   return (
-    <div className="flex justify-center items-center min-h-screen text-white p-4 border-0 border-red-500">
-      <div className="w-[45%] bg-neutral-900 rounded-lg p-8">
-        <h1 className="text-2xl font-bold mb-2">Contact Us</h1>
+    <div className="flex justify-center items-center py-12 sm:py-16 md:py-20 text-white px-4 sm:px-6 md:px-8 border-0">
+      <div className="w-full sm:w-4/5 md:w-3/4 lg:w-3/5 xl:w-[45%] bg-neutral-900 rounded-lg p-4 sm:p-6 md:p-8">
+        <h1 className="text-xl sm:text-2xl font-bold mb-2">Contact Us</h1>
         
-        <p className="text-zinc-400 text-sm mb-6">
+        <p className="text-zinc-400 text-xs sm:text-sm mb-4 sm:mb-6">
           Please reach out to us and we will get back to you at the speed of light.
         </p>
         
-        <form onSubmit={handleSubmit} className="space-y-4">
+        <form onSubmit={handleSubmit} className="space-y-3 sm:space-y-4">
           <div>
-            <label htmlFor="fullName" className="block text-sm text-zinc-400 mb-1">Full Name</label>
+            <label htmlFor="fullName" className="block text-xs sm:text-sm text-zinc-400 mb-1">Full Name</label>
             <input
               type="text"
               id="fullName"
@@ -64,7 +64,7 @@ export default function ContactForm() {
           </div>
           
           <div>
-            <label htmlFor="email" className="block text-sm text-zinc-400 mb-1">Email address</label>
+            <label htmlFor="email" className="block text-xs sm:text-sm text-zinc-400 mb-1">Email address</label>
             <input
               type="email"
               id="email"
@@ -78,7 +78,7 @@ export default function ContactForm() {
           </div>
           
           <div>
-            <label htmlFor="company" className="block text-sm text-zinc-400 mb-1">Company</label>
+            <label htmlFor="company" className="block text-xs sm:text-sm text-zinc-400 mb-1">Company</label>
             <input
               type="text"
               id="company"
@@ -91,7 +91,7 @@ export default function ContactForm() {
           </div>
           
           <div>
-            <label htmlFor="message" className="block text-sm text-zinc-400 mb-1">Message</label>
+            <label htmlFor="message" className="block text-xs sm:text-sm text-zinc-400 mb-1">Message</label>
             <textarea
               id="message"
               name="message"
@@ -113,23 +113,23 @@ export default function ContactForm() {
           </button>
           
           {submitStatus === 'success' && (
-            <p className="text-green-500 text-sm">Message sent successfully!</p>
+            <p className="text-green-500 text-xs sm:text-sm">Message sent successfully!</p>
           )}
           
           {submitStatus === 'error' && (
-            <p className="text-red-500 text-sm">Failed to send message. Please try again.</p>
+            <p className="text-red-500 text-xs sm:text-sm">Failed to send message. Please try again.</p>
           )}
         </form>
         
-        <div className="flex justify-center space-x-4 mt-6">
+        <div className="flex justify-center space-x-4 mt-4 sm:mt-6">
           <a href="#" className="text-zinc-400 hover:text-white transition-colors">
-            <FaTwitter size={20} />
+            <FaTwitter size={18} className="sm:w-5 sm:h-5" />
           </a>
           <a href="#" className="text-zinc-400 hover:text-white transition-colors">
-            <FaGithub size={20} />
+            <FaGithub size={18} className="sm:w-5 sm:h-5" />
           </a>
           <a href="#" className="text-zinc-400 hover:text-white transition-colors">
-            <FaLinkedin size={20} />
+            <FaLinkedin size={18} className="sm:w-5 sm:h-5" />
           </a>
         </div>
       </div>

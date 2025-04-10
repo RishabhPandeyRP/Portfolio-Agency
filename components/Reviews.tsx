@@ -18,10 +18,10 @@ export default function Reviews() {
     const duplicatedReviews = [...reviews, ...reviews]; // For seamless scroll
 
     return (
-        <div className="relative h-[700px] overflow-hidden ">
-            {/* Fade overlays */}
+        <div className="relative h-[400px] sm:h-[500px] md:h-[600px] lg:h-[700px] overflow-hidden">
+            {/* Fade overlays - commented out in original */}
             {/* <div className="pointer-events-none absolute top-0 h-32 w-full bg-gradient-to-b from-[#121212]/90 to-transparent z-10" />
-      <div className="pointer-events-none absolute bottom-0 h-32 w-full bg-gradient-to-t from-transparent via-[#121212]/30 to-transparent z-10" /> */}
+            <div className="pointer-events-none absolute bottom-0 h-32 w-full bg-gradient-to-t from-transparent via-[#121212]/30 to-transparent z-10" /> */}
 
             {/* Scrolling content container */}
             <motion.div
@@ -33,31 +33,25 @@ export default function Reviews() {
                     ease: "linear",
                 }}
             >
-
-
-
-
                 {/* Grid container with duplicated content */}
-                <div className="grid grid-cols-2 md:grid-cols-3 gap-7 w-full max-w-5xl mx-auto">
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 sm:gap-4 md:gap-5 lg:gap-7 w-full max-w-xs sm:max-w-2xl md:max-w-4xl lg:max-w-5xl mx-auto px-4 sm:px-6">
                     {duplicatedReviews.map((review, index) => (
                         <div
                             key={index}
-                            className="p-4 py-10 rounded-xl border shadow-md bg-white dark:bg-[#070707] border-neutral-800 min-h-[150px] h-fit"
+                            className="p-3 sm:p-4 py-6 sm:py-8 md:py-10 rounded-xl border shadow-md bg-white dark:bg-[#070707] border-neutral-800 min-h-[120px] sm:min-h-[140px] md:min-h-[150px] h-fit"
                             style={{ boxShadow: "#0000003d 0px 3px 8px" }}
                         >
-
-
-                            <div className="flex items-center gap-[10px]">
+                            <div className="flex items-center gap-2 sm:gap-[10px]">
                                 <Image
                                     height={70}
                                     width={70}
                                     src={review.imageLink}
                                     alt={review.name}
-                                    className="relative !m-0 h-12 w-12 rounded-full border-2 border-white object-cover object-top !p-0 transition duration-500 group-hover:z-30 group-hover:scale-105"
+                                    className="relative !m-0 h-8 w-8 sm:h-10 sm:w-10 md:h-12 md:w-12 rounded-full border-2 border-white object-cover object-top !p-0 transition duration-500 group-hover:z-30 group-hover:scale-105"
                                 />
-                                <h3 className="font-semibold text-lg mb-2 text-neutral-300">{review.name}</h3>
+                                <h3 className="font-semibold text-base sm:text-lg mb-1 sm:mb-2 text-neutral-300">{review.name}</h3>
                             </div>
-                            <p className="text-neutral-400 my-[10px]">{review.feedback}</p>
+                            <p className="text-sm sm:text-base text-neutral-400 my-2 sm:my-[10px]">{review.feedback}</p>
                         </div>
                     ))}
                 </div>
