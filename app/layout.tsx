@@ -22,7 +22,7 @@ const inter = Inter({
 const navItems = [
   { name: "Home", link: "/" },
   { name: "About", link: "/about" },
-  { name: "Work", link: "/work" },
+  { name: "Work", link: "/works" },
   { name: "Contact", link: "/contact" }
 ];
 
